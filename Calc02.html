@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>Math Operation</title>
+        <script type="text/javascript">
+            function mathOperation(num1,num2,operation)
+            {
+                //alert(num1.value)
+                //alert(num2.value)
+                //alert(operation.value)
+                
+                
+                //alert(eval(num1.value)+eval(num2.value))
+                var num1 = parseInt(num1.value)
+                var num2 = parseInt(num2.value)
+                var op = operation.value.toLowerCase()
+                var result;
+
+                if(op == "add")
+                    result = num1 + num2
+                if(op == "sub")
+                    result = num1 - num2
+                if(op == "mul")
+                    result = num1 * num2
+               if(op == "div")
+                    result = num1 / num2
+                
+                document.getElementById("divResult").innerHTML=result
+            }
+            function inputValidation(inputEvent,inputValue)
+            {
+                if(inputEvent.keyCode >=47 && inputEvent.keyCode <= 57)
+                {
+                   return true;
+                }  
+                return false;
+            }
+        </script>
+        <style>
+            #divResult{
+                border: 1px solid black;
+                display: inline-block;
+                width: 125px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        Enter Number 1 <input type="text" id="txtNum1" onkeypress ="return inputValidation(event,txtNum1)"> <br>
+        Enter Number 2 <input type="text" id="txtNum2"> <br>
+        Operation <select id="selOperation" onchange="mathOperation(txtNum1,txtNum2,selOperation)">
+            <option>Add</option>
+            <option>Sub</option>
+            <option>Mul</option>
+            <option>Div</option>
+        </select> <br>
+        Result <div id="divResult"></div>
+        <!--<button onclick="mathOperation(txtNum1,txtNum2,selOperation)">Result</button>-->
+    </body>
+</html>
+
+
+
+
+
+{
+    background-color: #f0f0f0;
+}
+#divContent{
+    border: 1px solid red;
+    padding:5px;
+    text-align: center;
+}
+#divCalculator{
+    border: 1px solid green;
+    display: inline-block;
+    background-color: white;
+}

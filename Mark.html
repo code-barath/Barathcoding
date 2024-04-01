@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title> Record System   </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css" integrity="sha512-ELV+xyi8IhEApPS/pSj66+Jiw+sOT1Mqkzlh8ExXihe4zfqbWkxPRi8wptXIO9g73FSlhmquFlUOuMSoXz5IRw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style> 
+        h2 {text-align: center;}
+        h3 {text-align: center;}
+        #divHeader {
+ 
+  background-color: whitesmoke;
+  box-shadow: 10px 10px 5px lightblue;
+}
+input[type=text], select {
+  width: 10%;
+  padding: 10px 10px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 90px;
+  box-sizing: border-box;
+}
+
+input[type=button] {
+  width: 10%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+label{
+    width:300px;
+    display:inline-block;
+}
+
+input[type=button]:hover {
+  background-color: #a0455d;
+}
+
+#enterResult{
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 8px;
+}
+        </style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script lang="text/javascript">
+$(document).ready(function(){
+           
+            $("#markDialog").dialog({
+                autoOpen:false
+            });
+
+            $("#btnSubmit").click(function(){
+                    $("#divStudentName").html($("#txtFname").val())
+                    $("#divTerm").html($("#term").text())
+                    $("#divEnglish").html($("#fenglish").val())
+                    $("#divMaths").html($("#fmath").val())
+                    $("#divScience").html($("#fscience").val())
+                    $("#divHumanities").html($("#fhumanities").val())
+
+                    $("#markDialog").dialog("open");
+
+                }
+            )
+        })
+
+       
+       
+
+
+
+
+
+
+    </script>
+    </head>
+
+      <body>
+        <div id="divHeader">
+            <h2>MOE : MARK ENTERING SYSTEM </h2>
+            <h3>GAN ENG SENG SCHOOL</h3>
+        </div>
+       
+        <div id="enterResult">
+        
+                <label for="fname">Full Name</label>
+                <input type="text" id="txtFname" name="firstname" placeholder="Your name.."> <br><br>
+                <label for="term">TERM</label>
+                <select id="term" name="term">
+                  <option value="term 1">Term 1 CA1</option>
+                  <option value="term 2">Term 2 SA1</option>
+                  <option value="term 3">Term 3 CA2</option>
+                  <option value="term 4">Term 4 SA2</option>
+                </select ><br>
+                <label for="fenglish">English</label>
+                <input type="text" id="fenglish" name="english" placeholder="English Mark.."> <br><br>
+                <label for="fenglish">Math</label>
+                <input type="text" id="fmath" name="math" placeholder="Math Mark.."> <br><br>
+                <label for="fenglish">Science</label>
+                <input type="text" id="fscience" name="science" placeholder="Science Mark.."> <br><br>
+                <label for="fenglish">Humanities</label>
+                <input type="text" id="fhumanities"name="humanities" placeholder="Humanities Mark.."> <br><br>
+                <input type="button" id="btnSubmit" value="Submit">
+            
+        </div>
+        <div id="markDialog" title="Student Marksheet">
+            <h3>Student Name </h3> <div id="divStudentName"></div>
+            <h3>Term</h3>  <div id="divTerm"></div>
+            <h3>English</h3> <div id="divEnglish"></div>
+            <h3>Maths</h3> <div id="divMaths"></div>
+            <h3>Science </h3> <div id="divScience"></div>
+            <h3>Humanities</h3> <div id="divHumanities"></div>
+        </div>
+      </body>
+</html>

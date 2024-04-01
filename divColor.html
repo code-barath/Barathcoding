@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Home Loan Calculator</title>
+     <style> 
+     #divColor 
+     { 
+      border:1px solid red;
+      height:50px;
+      width:50px;
+      
+     }
+     
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script lang="text\javascript">
+        $(function(){
+
+        // jQuery methods go here...
+        $("#ddlColor").change(function(){
+            alert($(this).val());
+            $("#divColor").css({'background-color':$(this).val()});
+        })
+        });
+        
+    </script>
+    </head>
+    <body>
+        <div id="divColor"> Barath</div>
+        <input type="text"  id="txtColor">
+        <button onclick="changeDivBGColor(txtColor)">change color</button>
+        <select id="ddlColor">
+            <option>Red</option>
+            <option>Blue</option>
+            <option>Green</option>
+            <option>Yellow</option>
+            <option>Pink</option>
+        </select>
+    </body>
+        
+</html>
+
+
+
+

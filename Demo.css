@@ -1,0 +1,48 @@
+
+        body{
+            background-color: bisque;
+        }
+        h1{
+            color:blue
+        }
+        ul>li{
+            color:skyblue;
+            padding: 30px 20px 40px 10px;
+            border: 1px solid gray;
+            width:50px;
+            background-color: brown;
+        }
+        ol>li{
+        color:chocolate;
+        }
+        
+        #signinDiv{
+            border: 1px solid purple;
+            text-align: center;
+            border-radius: 10px;
+            width: 50%;
+            background-color: white;
+            height: 200px;
+        }
+        #outerDiv
+        {
+            border: 1px solid green;
+            justify-content: center;
+            display:flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            
+        }
+        label{
+            display: block;
+            padding: 5px;
+        }
+        input{
+            width: 25%;
+            height: 25%;
+        }
+        .contentDisplay
+        {
+            color:red;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }

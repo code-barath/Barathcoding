@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Math Operation</title>
+        <script type="text/javascript">
+            function addNumbers(num1,num2)
+            {
+                //alert(num1.value)
+                //alert(num2.value)
+                //alert(eval(num1.value)+eval(num2.value))
+                var num1 = parseInt(num1.value)
+                var num2 = parseInt(num2.value)
+                var result = num1 + num2
+                document.getElementById("divResult").innerHTML=result
+            }
+        </script>
+        <style>
+            #divResult{
+                border: 1px solid black;
+                display: inline-block;
+                width: 25px;
+            }
+        </style>
+    </head>
+    <body>
+        Enter Number 1 <input type="text" id="txtNum1"> <br>
+        Enter Number 2 <input type="text" id="txtNum2"> <br>
+        Operation <select>
+            <option>Add</option>
+            <option>Sub</option>
+            <option>Mul</option>
+            <option>Div</option>
+        </select> <br>
+        Result <div id="divResult"></div>
+        <button onclick="addNumbers(txtNum1,txtNum2)">Add</button>
+    </body>
+</html>
